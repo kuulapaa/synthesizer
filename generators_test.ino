@@ -1,7 +1,7 @@
 
 uint16_t freqs[] = {
   2093, 2217, 2349, 2489, 2637, 2794, 2960, 3136, 3322, 3520, 3729, 3951};
- // Real piano 7th octave frequencies (about), bit shift right to get 7 and so on...
+ // Real piano 7th octave frequencies (about), bit shift right to get 6 and so on...
  
 void setup() {
   // put your setup code here, to run once:
