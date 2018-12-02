@@ -35,7 +35,7 @@ ISR(TIMER0_COMPA_vect)
 {
     //TRIANGLE GEN
     uint16_t output = 0;
-    triangle += (freqs[0]>>0);  // Add frequency value in every interrupt. Bit shift right gives lower octave
+    triangle += (freqs[0]>>0);  // Phase accumulator. Add frequency value in every interrupt. Bit shift right gives lower octave
     if (triangle > 32768) triangle_out = ((0xFFFF ^ triangle)<<1); // XOR to ramp down
     else triangle_out = (triangle<<1);
     output = (triangle_out>>2);  //
