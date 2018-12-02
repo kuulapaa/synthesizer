@@ -14,7 +14,7 @@ void timer0_init()
   TCCR0A = 0x02;  //CTC
   TCCR0B = 0x02; //clkIO/8
   OCR0A = 37; //-> interrupts handled at 66.6kHz (TOO HIGH, BUT IS GIVING THE RIGHT FREQUENCY OUTPUT NOW WITH 16-BIT PHASE ACCUMULATORS...) Can handle at least 4 generators
-  TIMSK0 = 0x02; // start timer from zero when interrupt occurs
+  TIMSK0 = 0x02; // enable interrupt on compare match A
 }
 
 
